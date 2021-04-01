@@ -42,14 +42,14 @@ export default function Home() {
 					<ul className="appList clearfix">
 						<li key="grilla">
 							<a href="https://grilla.diseñamela.com" target="_blank">
-								<img src='/appGrilla.svg' alt="Grilla" />
+								<img src='/AppGrilla.svg' alt="Grilla" />
 								<h3>Grilla</h3>
 							</a>
 						</li>
 
 						<li key="grilla" className="comingSoon">
 							<a href="#">
-								<img src='/appType.svg' alt="Grilla" />
+								<img src='/AppType.svg' alt="Grilla" />
 								<h3>Type Scale</h3>
 							</a>
 						</li>
