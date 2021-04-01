@@ -1,8 +1,6 @@
 import Head from 'next/head'
 
 import logo from '../public/logo-disenamela.png';
-import appGrilla from '../public/appGrilla.svg';
-import appType from '../public/appType.svg';
 
 export default function Home() {
 	return (
@@ -44,14 +42,14 @@ export default function Home() {
 					<ul className="appList clearfix">
 						<li key="grilla">
 							<a href="https://grilla.diseñamela.com" target="_blank">
-								<img src={appGrilla} alt="Grilla" />
+								<img src='/appGrilla.svg' alt="Grilla" />
 								<h3>Grilla</h3>
 							</a>
 						</li>
 
 						<li key="grilla" className="comingSoon">
 							<a href="#">
-								<img src={appType} alt="Grilla" />
+								<img src='/appType.svg' alt="Grilla" />
 								<h3>Type Scale</h3>
 							</a>
 						</li>
