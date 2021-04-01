@@ -1,7 +1,12 @@
 import '../styles/globals.css'
+import '../styles/bootstrap-grid.scss'
+import '../styles/home.scss'
 
-function MyApp({ Component, pageProps }) {
+import React from 'react';
+
+function Disenamela({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default Disenamela
+

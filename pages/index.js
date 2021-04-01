@@ -1,65 +1,47 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+
+import logo from '../public/logo-disenamela.png';
+import appGrilla from '../public/appGrilla.svg';
+import appType from '../public/appType.svg';
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<>
+			<Head>
+				<title>Diseñamela</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+			<main>
+				<header>
+					<div className="container-fluid">
+						<a href="/" className="logo"><img src={logo} alt="Diseñamela.com" /></a>
+					</div>
+				</header>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+				<div className="container-md py-8">
+					<h1 className="mb-4">Hola, diseñadores!</h1>
+					<p>Recién empezamos con este proyecto. Somos 2 diseñadores que no se nos ocurrió mejor idea que desarrollar aplicaciones que ayuden a otros diseñadores para facilitar ciertas tareas que a veces pueden resultar un tanto aburridas o complejas. A continuación las funciones hasta ahora disponibles. De nada.</p>
+				</div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+				<div className="container">
+					<ul className="appList clearfix">
+						<li key="grilla">
+							<a href="https://grilla.diseñamela.com" target="_blank">
+								<img src={appGrilla} alt="Grilla" />
+								<h3>Grilla</h3>
+							</a>
+						</li>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+						<li key="grilla" className="comingSoon">
+							<a href="#">
+								<img src={appType} alt="Grilla" />
+								<h3>Type Scale</h3>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</main>
+		</>
+	)
 }

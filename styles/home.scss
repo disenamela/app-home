@@ -1,0 +1,68 @@
+header {
+    background: #fff;
+    @apply shadow-lg;
+    @apply py-2;
+
+    .logo {
+        height: 3rem;
+        display: inline-block;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+main {
+    min-height: 100vh;
+    @apply bg-main-50;
+}
+
+h1 {
+    font-family: "Poppins";
+    font-size: 4rem;
+}
+
+.appList {
+    @apply p-0 flex justify-center gap-4 flex-wrap;
+
+    li a {
+        display: inline-block;
+        @apply bg-white rounded-xl text-center pt-6 pb-4 px-2 transition duration-300;
+        width: 200px;
+        position: relative;
+
+        img {
+            @apply mx-auto;
+            width: max(3vw, 5rem);
+        }
+
+        &:hover {
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+            @apply shadow-xl;
+            transform: translateY(-.5rem);
+        }
+    }
+
+    .comingSoon a {
+        pointer-events: none;
+        background: rgba(#fff, 0.5);
+        box-shadow: 0 0 0 1px rgba(#000, 0.05);
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            width: 80%;
+            height: 80%;
+            background: url("../public/proximamente.svg") top left no-repeat;
+            top: 0;
+            right: 0;
+        }
+
+        & > * {
+            opacity: 0.3;
+        }
+    }
+}
