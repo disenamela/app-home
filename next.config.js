@@ -11,5 +11,8 @@ module.exports = withImages({
 		});
 
 		return config;
+	},
+	future: {
+		webpack5: true,
 	}
 });
