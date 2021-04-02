@@ -34,12 +34,13 @@ export default function Home() {
 				</header>
 
 				<div className="container-md py-8">
-					<h1 className="mb-4">Hola, diseñadores!</h1>
-					<p>Recién empezamos con este proyecto. Somos 2 diseñadores que no se nos ocurrió mejor idea que desarrollar aplicaciones que ayuden a otros diseñadores para facilitar ciertas tareas que a veces pueden resultar un tanto aburridas o complejas. A continuación las funciones hasta ahora disponibles. De nada.</p>
+					<h1 className="mb-4">Hola mundo!</h1>
+					<p>Somos 2 amigos, diseñadores, con una pasión enorme por nuestra profesión. Allá por 2019 empezamos con este proyecto, cuando no tuvimos mejor idea que ponernos a armar pequeñas aplicaciones que nos ayuden a nosotros y a otros diseñadores. <code>Diseñamela</code> nace para eso: queremos optimizar ciertas tareas que a veces pueden resultar un tanto aburridas o complejas de replicar una y otra vez con cada proyecto.</p>
+					<p>A continuación las funciones hasta ahora disponibles:</p>
 				</div>
 
 				<div className="container">
-					<ul className="appList clearfix">
+					<ul className="appList">
 						<li key="grilla">
 							<a href="https://grilla.diseñamela.com" target="_blank">
 								<img src='/AppGrilla.svg' alt="Grilla" />
