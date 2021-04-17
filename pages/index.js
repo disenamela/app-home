@@ -48,10 +48,17 @@ export default function Home() {
 							</a>
 						</li>
 
-						<li key="grilla" className="comingSoon">
-							<a href="#">
-								<img src='/AppType.svg' alt="Grilla" />
+						<li key="typeScale">
+							<a href="https://typescale.diseñamela.com" target="_blank">
+								<img src='/AppType.svg' alt="Type Scale" />
 								<h3>Type Scale</h3>
+							</a>
+						</li>
+
+						<li key="social" className="comingSoon">
+							<a href="#">
+								<img src='/AppSocial.svg' alt="Grilla" />
+								<h3>Social</h3>
 							</a>
 						</li>
 					</ul>
