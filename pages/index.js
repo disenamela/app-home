@@ -1,10 +1,16 @@
 import Head from 'next/head'
+import { useState } from 'react';
+import classnames from 'classnames'
+
 
 import logo from '../public/logo-disenamela.png';
+import NavTabs from '../components/NavTabs';
 
 export default function Home() {
+	const [theme, setTheme] = useState();
+
 	return (
-		<>
+		<div className={classnames({ 'dark': theme && theme.toLowerCase() === 'dark' })}>
 			<Head>
 				<title>Diseñamela</title>
 				<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
@@ -29,13 +35,22 @@ export default function Home() {
 			<main>
 				<header>
 					<div className="container-fluid">
-						<a href="/" className="logo"><img src={logo} alt="Diseñamela.com" /></a>
+						<div className="row">
+							<div className="col-auto">
+								<a href="/" className="logo"><img src={logo} alt="Diseñamela.com" /></a>
+							</div>
+							<div className="col flex justify-end gap-2 center-v">
+								<div>
+									<NavTabs options={['Light', 'Dark']} name={'theme'} onChange={(e) => setTheme(e)} />
+								</div>
+							</div>
+						</div>
 					</div>
 				</header>
 
 				<div className="container-md py-8">
 					<h1 className="mb-4">Hola mundo!</h1>
-					<p>Somos 2 amigos, diseñadores, con una pasión enorme por nuestra profesión. Allá por 2019 empezamos con este proyecto, cuando no tuvimos mejor idea que ponernos a armar pequeñas aplicaciones que nos ayuden a nosotros y a otros diseñadores. <code>Diseñamela</code> nace para eso: queremos optimizar ciertas tareas que a veces pueden resultar un tanto aburridas o complejas de replicar una y otra vez con cada proyecto.</p>
+					<p>Somos 2 amigos, diseñadores, con una pasión enorme por nuestra profesión. Allá por 2019 empezamos con este proyecto, cuando no tuvimos mejor idea que ponernos a armar pequeñas aplicaciones que nos ayuden a nosotros y a otros diseñadores. <code>Diseñamela</code> nace para eso: queremos hacerle la vida más fácil a nuestros colegas diseñadores.</p>
 					<p>A continuación las funciones hasta ahora disponibles:</p>
 				</div>
 
@@ -64,6 +79,6 @@ export default function Home() {
 					</ul>
 				</div>
 			</main>
-		</>
+		</div>
 	)
 }

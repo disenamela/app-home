@@ -1,7 +1,7 @@
 header {
     background: #fff;
-    @apply shadow;
-    @apply py-2;
+    @apply shadow py-2;
+    @apply dark:bg-gray-800 transition-colors;
 
     .logo {
         height: 3rem;
@@ -16,11 +16,14 @@ header {
 main {
     min-height: 100vh;
     @apply bg-main-50;
+    @apply dark:bg-gray-900 transition-colors;
 }
 
 h1 {
     font-family: "Poppins";
     font-size: 4rem;
+
+    @apply dark:text-white transition-colors;
 }
 
 .appList {
@@ -28,9 +31,10 @@ h1 {
 
     li a {
         display: inline-block;
-        @apply bg-white rounded-xl text-center pt-6 pb-4 px-2 transition duration-300;
         width: 200px;
         position: relative;
+        @apply bg-white rounded-xl text-center pt-6 pb-4 px-2 transition duration-300;
+        @apply dark:bg-black dark:text-white;
 
         img {
             @apply mx-auto;
@@ -74,5 +78,6 @@ p {
         display: inline;
         padding: .25rem .5rem;
         @apply bg-main-500 bg-opacity-10 rounded text-main-500;
+        @apply dark:bg-opacity-25;
     }
 }

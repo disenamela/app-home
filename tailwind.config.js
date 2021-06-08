@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
 	important: true,
 	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-	darkMode: false, // or 'media' or 'class'
+	darkMode: 'class', // or 'media' or 'class'
 	corePlugins: {
 		container: false,
 	},
@@ -46,7 +46,7 @@ module.exports = {
 					'800': '#5525c4',
 					'900': '#45209f',
 				},
-				gray: colors.blueGray,
+				gray: colors.coolGray,
 				red: colors.rose,
 				blue: colors.lightBlue,
 				yellow: colors.amber,
