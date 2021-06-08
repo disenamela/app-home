@@ -46,7 +46,7 @@ module.exports = {
 					'800': '#5525c4',
 					'900': '#45209f',
 				},
-				gray: colors.coolGray,
+				gray: colors.gray,
 				red: colors.rose,
 				blue: colors.lightBlue,
 				yellow: colors.amber,
