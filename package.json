@@ -14,6 +14,7 @@
     "next-images": "^1.7.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-pill-switcher": "^1.0.3",
     "sass": "^1.32.8",
     "webpack": "^5.30.0"
   },

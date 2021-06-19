@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import { useState } from 'react';
 import classnames from 'classnames'
-
+import { PillSwitcher } from 'react-pill-switcher'
 
 import logo from '../public/logo-disenamela.png';
-import NavTabs from '../components/NavTabs';
 import Heading from '../adapters/Headings';
 
 export default function Home() {
@@ -25,7 +24,17 @@ export default function Home() {
 							</div>
 							<div className="col flex justify-end gap-2 center-v">
 								<div>
-									<NavTabs options={['Light', 'Dark']} name={'theme'} onChange={(e) => setTheme(e)} />
+									<PillSwitcher name={'theme'} onChange={(e) => setTheme(e)} 
+										options={[
+											{
+												icon: <i class="uil uil-sun" style={{fontSize: '1.2em'}}></i>,
+												label: 'Light'
+											},
+											{
+												icon: <i class="uil uil-moon" style={{fontSize: '1.2em'}}></i>,
+												label: 'Dark'
+											},
+										]} />
 								</div>
 							</div>
 						</div>
