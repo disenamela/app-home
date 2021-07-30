@@ -24,14 +24,14 @@ export default function Home() {
 							</div>
 							<div className="col flex justify-end gap-2 center-v">
 								<div>
-									<PillSwitcher name={'theme'} onChange={(e) => setTheme(e)} 
+									<PillSwitcher name={'theme'} onChange={(e) => setTheme(e)}
 										options={[
 											{
-												icon: <i class="uil uil-sun" style={{fontSize: '1.2em'}}></i>,
+												icon: <i class="uil uil-sun" style={{ fontSize: '1.2em' }}></i>,
 												label: 'Light'
 											},
 											{
-												icon: <i class="uil uil-moon" style={{fontSize: '1.2em'}}></i>,
+												icon: <i class="uil uil-moon" style={{ fontSize: '1.2em' }}></i>,
 												label: 'Dark'
 											},
 										]} />
@@ -49,29 +49,98 @@ export default function Home() {
 
 				<div className="container">
 					<ul className="appList">
-						<li key="grilla">
-							<a href="https://grilla.diseñamela.com" target="_blank">
-								<img src='/AppGrilla.svg' alt="Grilla" />
-								<h3>Grilla</h3>
-							</a>
-						</li>
-
-						<li key="typeScale">
-							<a href="https://typescale.diseñamela.com" target="_blank">
-								<img src='/AppType.svg' alt="Type Scale" />
-								<h3>Type Scale</h3>
-							</a>
-						</li>
-
-						<li key="social" className="comingSoon">
-							<a href="#">
-								<img src='/AppSocial.svg' alt="Grilla" />
-								<h3>Social</h3>
-							</a>
-						</li>
+						<AppCard
+							key='grilla'
+							title='Grilla'
+							link='https://grilla.diseñamela.com'
+							icon='/AppGrilla.svg'
+						/>
+						<AppCard
+							key='TypeScale'
+							title='Type Scale'
+							link='https://typescale.diseñamela.com'
+							icon='/AppType.svg'
+						/>
+						<AppCard
+							key='Social'
+							title='Social'
+							link={null}
+							icon='/AppSocial.svg'
+							comingSoon
+						/>
 					</ul>
+				</div>
+
+				<div className="container-md py-6">
+					<h3 className="text-3xl">Otras apps</h3>
+
+					<ul className="appList --seccondary">
+						<AppCardSeccondary
+							key='Pixabay'
+							title='Pixabay'
+							link='https://pixabay.com/'
+							icon='/external-apps/pixabay.png'
+							bg='#4ca84c'
+						/>
+
+						<AppCardSeccondary
+							key='ifonts'
+							title='ifonts'
+							link='https://ifonts.xyz/'
+							icon='/external-apps/ifonts.bmp'
+							bg='#000'
+						/>
+
+						<AppCardSeccondary
+							key='Icons8'
+							title='Icons8'
+							link='https://icons8.com/'
+							icon='/external-apps/icons8.png'
+							bg='#1fb141'
+						/>
+
+
+						<AppCardSeccondary
+							key='mockupworld'
+							title='Mockup World'
+							link='https://www.mockupworld.co/'
+							icon='/external-apps/mockupworld.png'
+							bg='#fff'
+						/>
+
+						<AppCardSeccondary
+							key='mockupworld'
+							title='Mockup World'
+							link='https://www.mockupworld.co/'
+							icon='/external-apps/mockupworld.png'
+							bg='#fff'
+						/>
+					</ul>
+
 				</div>
 			</main>
 		</div>
+	)
+}
+
+function AppCard({ title, link, icon, comingSoon = false }) {
+	return (
+		<li className={comingSoon && "comingSoon"}>
+			<a href={link}>
+				<img src={icon} alt={title} />
+				<h3>{title}</h3>
+			</a>
+		</li>
+	)
+}
+
+function AppCardSeccondary({ title, link, icon, comingSoon = false, bg = '' }) {
+	return (
+		<li className={comingSoon && "comingSoon"}>
+			<a href={link + '?ref=https://www.xn--diseamela-o6a.com/'} target="_blank" style={{ backgroundColor: bg }}>
+				<img src={icon} alt={title} />
+			</a>
+			<h3>{title}</h3>
+		</li>
 	)
 }

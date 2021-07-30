@@ -1,83 +1,113 @@
 header {
-    background: #fff;
-    @apply shadow py-2;
-    @apply dark:bg-gray-800 transition-colors;
+	background: #fff;
+	@apply shadow py-2;
+	@apply dark:bg-gray-800 transition-colors;
 
-    .logo {
-        height: 3rem;
-        display: inline-block;
+	.logo {
+		height: 3rem;
+		display: inline-block;
 
-        img {
-            height: 100%;
-        }
-    }
+		img {
+			height: 100%;
+		}
+	}
 }
 
 main {
-    min-height: 100vh;
-    @apply bg-main-50;
-    @apply dark:bg-gray-900 transition-colors;
+	min-height: 100vh;
+	@apply bg-main-50;
+	@apply dark:bg-gray-900 transition-colors;
 }
 
 h1 {
-    font-family: "Poppins";
-    font-size: 4rem;
+	font-family: 'Poppins';
+	font-size: 4rem;
 
-    @apply dark:text-white transition-colors;
+	@apply dark:text-white transition-colors;
 }
 
 .appList {
-    @apply p-0 flex justify-center gap-4 flex-wrap;
+	@apply p-0 flex justify-center gap-4 flex-wrap;
 
-    li a {
-        display: inline-block;
-        width: 200px;
-        position: relative;
-        @apply bg-white rounded-xl text-center pt-6 pb-4 px-2 transition duration-300;
-        @apply dark:bg-black dark:text-white;
+	li a {
+		display: inline-block;
+		width: 200px;
+		position: relative;
+		@apply bg-white rounded-xl text-center pt-6 pb-4 px-2 transition duration-300;
+		@apply dark:bg-black dark:text-white;
 
-        img {
-            @apply mx-auto;
-            width: max(3vw, 5rem);
-        }
+		img {
+			@apply mx-auto;
+			width: max(3vw, 5rem);
+		}
 
-        &:hover {
-            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
-            @apply shadow-xl;
-            transform: translateY(-.5rem);
-        }
-    }
+		&:hover {
+			box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+			@apply shadow-xl;
+			transform: translateY(-0.5rem);
+		}
+	}
 
-    .comingSoon a {
-        pointer-events: none;
-        background: rgba(#fff, 0.5);
-        box-shadow: 0 0 0 1px rgba(#000, 0.05);
+	.comingSoon a {
+		pointer-events: none;
+		background: rgba(#fff, 0.5);
+		box-shadow: 0 0 0 1px rgba(#000, 0.05);
 
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            pointer-events: none;
-            width: 80%;
-            height: 80%;
-            background: url("../public/proximamente.svg") top left no-repeat;
-            top: 0;
-            right: 0;
-        }
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			pointer-events: none;
+			width: 80%;
+			height: 80%;
+			background: url('../public/proximamente.svg') top left no-repeat;
+			top: 0;
+			right: 0;
+		}
 
-        & > * {
-            opacity: 0.3;
-        }
-    }
+		& > * {
+			opacity: 0.3;
+		}
+	}
+
+	&.--seccondary {
+		@apply justify-center flex;
+
+		li {
+			@apply text-center;
+			a {
+				width: 4rem;
+				height: 4rem;
+				@apply rounded-full border cursor-pointer flex items-center justify-center p-0 mx-auto;
+				opacity: .5;
+
+				img {
+					width: 24px;
+					@apply transition-opacity;
+				}
+
+				&:hover {
+					opacity: 1;
+					transform: none;
+					box-shadow: none;
+				}
+			}
+			h3 {
+				@apply m-0 mt-1;
+				width: 90px;
+				overflow: hidden;
+			}
+		}
+	}
 }
 
 p {
-    @apply my-3;
+	@apply my-3;
 
-    code {
-        display: inline;
-        padding: .25rem .5rem;
-        @apply bg-main-500 bg-opacity-10 rounded text-main-500;
-        @apply dark:bg-opacity-25;
-    }
+	code {
+		display: inline;
+		padding: 0.25rem 0.5rem;
+		@apply bg-main-500 bg-opacity-10 rounded text-main-500;
+		@apply dark:bg-opacity-25;
+	}
 }
