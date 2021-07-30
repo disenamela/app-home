@@ -123,7 +123,7 @@ export default function Home() {
 
 function AppCard({ title, link, icon, comingSoon = false }) {
 	return (
-		<li className={comingSoon && "comingSoon"}>
+		<li className={comingSoon ? "comingSoon" : ""}>
 			<a href={link}>
 				<img src={icon} alt={title} />
 				<h3>{title}</h3>
@@ -134,8 +134,8 @@ function AppCard({ title, link, icon, comingSoon = false }) {
 
 function AppCardSeccondary({ title, link, icon, comingSoon = false, bg = '' }) {
 	return (
-		<li className={comingSoon && "comingSoon"}>
-			<a href={link + '?ref=https://www.xn--diseamela-o6a.com/'} target="_blank" style={{ backgroundColor: bg }}>
+		<li className={comingSoon ? "comingSoon" : ""}>
+			<a href={link + '?ref=www.diseñamela.com'} target="_blank" style={{ backgroundColor: bg }}>
 				<img src={icon} alt={title} />
 			</a>
 			<h3>{title}</h3>
