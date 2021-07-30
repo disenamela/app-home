@@ -62,6 +62,12 @@ export default function Home() {
 							icon='/AppType.svg'
 						/>
 						<AppCard
+							key='Croma'
+							title='Croma'
+							link='https://croma.diseñamela.com'
+							icon='/AppCroma.svg'
+						/>
+						<AppCard
 							key='Social'
 							title='Social'
 							link={null}
@@ -71,8 +77,8 @@ export default function Home() {
 					</ul>
 				</div>
 
-				<div className="container-md py-6">
-					<h3 className="text-3xl">Otras apps</h3>
+				<div className="container-md pb-6 pt-4">
+					<h2 className="text-lg text-center dark:text-white my-4">Apps de terceros</h2>
 
 					<ul className="appList --seccondary">
 						<AppCardSeccondary
@@ -99,14 +105,6 @@ export default function Home() {
 							bg='#1fb141'
 						/>
 
-
-						<AppCardSeccondary
-							key='mockupworld'
-							title='Mockup World'
-							link='https://www.mockupworld.co/'
-							icon='/external-apps/mockupworld.png'
-							bg='#fff'
-						/>
 
 						<AppCardSeccondary
 							key='mockupworld'
