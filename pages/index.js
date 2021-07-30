@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react';
 import classnames from 'classnames'
-import { PillSwitcher } from 'react-pill-switcher'
+import { PillSwitcher } from '../components/PillSwitcher'
 
 import logo from '../public/logo-disenamela.png';
 import Heading from '../adapters/Headings';
@@ -132,7 +132,7 @@ function AppCard({ title, link, icon, comingSoon = false }) {
 	)
 }
 
-function AppCardSeccondary({ title, link, icon, comingSoon = false, bg = '' }) {
+function AppCardSeccondary({ title, link, icon, comingSoon = false, bg = '#fff' }) {
 	return (
 		<li className={comingSoon ? "comingSoon" : ""}>
 			<a href={link + '?ref=www.diseñamela.com'} target="_blank" style={{ backgroundColor: bg }}>

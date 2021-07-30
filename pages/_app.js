@@ -1,9 +1,9 @@
 import '../styles/globals.css'
 import '../styles/bootstrap-grid.scss'
 import '../styles/home.scss'
-// import '../styles/nav-tabs.scss'
+import '../styles/pill-switcher.scss'
 
-import 'react-pill-switcher/dist/index.css'
+// import 'react-pill-switcher/dist/index.css'
 
 import React from 'react';
 
