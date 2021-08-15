@@ -8,10 +8,15 @@ import '../styles/pill-switcher.scss'
 import React from 'react';
 
 function Disenamela({ Component, pageProps }) {
-  return <>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <Component {...pageProps} />
-  </>
+  const Layout = Component.Layout ? Component.Layout : React.Fragment
+  return (
+    <>
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  )
 }
 
 export default Disenamela

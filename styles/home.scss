@@ -11,6 +11,15 @@ header {
 			height: 100%;
 		}
 	}
+
+	@apply dark:text-white;
+	svg {
+		fill: currentColor;
+	}
+	.link {
+		@apply hover:text-main-500 transition-colors;
+	}
+
 }
 
 main {
