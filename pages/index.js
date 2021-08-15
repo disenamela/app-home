@@ -23,6 +23,9 @@ export default function Home() {
 								<a href="/" className="logo"><img src={logo} alt="Diseñamela.com" /></a>
 							</div>
 							<div className="col flex justify-end gap-2 center-v">
+								<a href='https://github.com/disenamela' target='_blank'>
+									<img className='github-logo' src='/github-logo.svg' />
+								</a>
 								<div>
 									<PillSwitcher name={'theme'} onChange={(e) => setTheme(e)}
 										options={[
