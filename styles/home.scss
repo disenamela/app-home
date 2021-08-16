@@ -17,7 +17,7 @@ header {
 		fill: currentColor;
 	}
 	.link {
-		@apply hover:text-main-500 transition-colors;
+		@apply flex items-center gap-1 font-bold hover:text-main-500 transition-colors;
 	}
 
 }
@@ -126,5 +126,5 @@ p {
 }
 
 .github-logo {
-	width: 2rem;
+	width: 1.5rem;
 }
